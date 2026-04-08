@@ -1,0 +1,6 @@
+playwright
+playwright-stealth
+fake-useragent
+opencv-python
+numpy
+easyocr
