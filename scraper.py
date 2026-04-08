@@ -67,7 +67,7 @@ async def wait_until_unblocked(page):
 
                 return
 
-            print("⏳ ждём решения капчи...")
+            print("Ждём решения капчи...")
 
         except:
             print("Страница перезагрузилась, ждём...")
@@ -105,7 +105,7 @@ async def wait_for_phone_button(item, retries=5, delay=2):
             btn = await item.query_selector('button[data-marker^="item-phone-button"]')
 
             if btn:
-                print(f"📞 кнопка появилась (попытка {i+1})")
+                print(f"Кнопка появилась (попытка {i+1})")
                 return btn
 
             print(f"Ждём кнопку... попытка {i+1}")
@@ -137,7 +137,7 @@ async def wait_for_new_phone_image(page, existing_count, retries=5, delay=2):
             imgs = await page.query_selector_all('img[data-marker="phone-image"]')
 
             if len(imgs) > existing_count:
-                print("📸 новая картинка")
+                print("Новая картинка")
                 return imgs[-1]
 
             print(f"Ждём новую картинку... {i+1}")
